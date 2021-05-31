@@ -80,6 +80,10 @@ p {
   line-height: 3.5rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Header */
 
 header {
@@ -226,11 +230,13 @@ section .section-intro {
 }
 
 .gallery-item {
-  /* box-shadow: 5px 5px 0px var(--red-shade); */
+  background-color: var(--light-blue);
+  box-shadow: 5px 5px 0px var(--red-shade);
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
+  justify-content: center;
+  max-width: 900px;
+  width: 95%;
 }
 
 .gallery-item:not(:first-of-type) {
@@ -239,20 +245,51 @@ section .section-intro {
 
 .gallery-item-profile .image-container {
   background-color: var(--dark-grey);
-  box-shadow: 5px 5px 0px var(--red-shade);
+  /* box-shadow: 5px 5px 0px var(--red-shade); */
   flex-shrink: 0;
   height: 500px;
-  width: 300px;
+  width: 40%;
 }
 
 .gallery-item-profile .gallery-item-info {
   background-color: var(--light-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   padding: 40px 25px;
-  width: 600px;
+  height: 100%;
+  width: 60%;
 }
 
 .gallery-item-profile .gallery-item-info p {
   font-size: 2rem;
+}
+
+.gallery-item-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-item-icons .skills-icon {
+  font-size: 3rem;
+  margin: 10px;
+  padding: 10px;
+}
+
+.project-links {
+  display: flex;
+}
+
+.project-links a {
+  border: 2px solid var(--light-grey);
+  color: var(--light-grey);
+  font-size: 1.8rem;
+  letter-spacing: 1.2px;
+  margin: 10px;
+  padding: 10px 15px;
+  text-transform: uppercase;
 }
 
 
