@@ -87,8 +87,8 @@ header::before {
   content: '';
   background-color: var(--light-blue);
   border-radius: 50%;
-  height: 800px;
-  width: 800px;
+  height: 700px;
+  width: 700px;
   position: absolute;
   top: 15%;
   left: 25%;
@@ -120,6 +120,7 @@ header nav a {
   padding: 1rem 2rem;
   position: relative;
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 
 header nav a::after {
@@ -135,6 +136,11 @@ header nav a::after {
   transform-origin: 0% 0%;
 
   transition: transform 0.3s ease-in-out;
+}
+
+header nav a:hover,
+header nav a:focus {
+  color: var(--red-shade);
 }
 
 header nav a:hover::after,
@@ -176,6 +182,28 @@ section .section-intro {
 }
 
 /* Skills Section */
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  margin: 50px auto;
+  max-width: 1400px;
+}
+
+.skills-list li {
+  margin: 50px 40px;
+}
+
+.skills-icon {
+  background-color: var(--dark-blue);
+  border-radius: 50%;
+  color: var(--dark-grey);
+  font-size: 12rem;
+  padding: 35px;
+}
 
 /* Portfolio Section*/
 
