@@ -52,6 +52,7 @@ ul {
 
 h1 {
   font-size: 10rem;
+  margin-top: 100px;
 }
 
 h2 {
@@ -67,6 +68,11 @@ h3 {
   text-transform: capitalize;
 }
 
+h4 {
+  font-size: 3rem;
+  margin: 20px;
+}
+
 p {
   color: var(--dark-grey);
   font-size: 2.4rem;
@@ -77,7 +83,7 @@ p {
 /* Header */
 
 header {
-  height: 100vh;
+  /* height: 100vh; */
   min-height: 800px;
   padding-top: 20px;
   position: relative;
@@ -94,7 +100,7 @@ header::before {
   width: 600px;
   position: absolute;
   top: 20%;
-  left: 25%;
+  left: 28%;
   z-index: -1;
 }
 
@@ -197,24 +203,96 @@ section .section-intro {
 }
 
 .skills-list li {
-  margin: 50px 40px;
+  margin: 60px 30px;
 }
 
 .skills-icon {
   background-color: var(--dark-blue);
   border-radius: 50%;
   color: var(--dark-grey);
-  font-size: 12rem;
-  padding: 35px;
+  font-size: 10rem;
+  padding: 45px;
 }
 
 /* Portfolio Section*/
 
 .section-portfolio-gallery {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  width: 100%;
 }
 
+.gallery-item {
+  /* box-shadow: 5px 5px 0px var(--red-shade); */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.gallery-item:not(:first-of-type) {
+  margin-top: 40px;
+}
+
+.gallery-item-profile .image-container {
+  background-color: var(--dark-grey);
+  box-shadow: 5px 5px 0px var(--red-shade);
+  flex-shrink: 0;
+  height: 500px;
+  width: 300px;
+}
+
+.gallery-item-profile .gallery-item-info {
+  background-color: var(--light-blue);
+  padding: 40px 25px;
+  width: 600px;
+}
+
+.gallery-item-profile .gallery-item-info p {
+  font-size: 2rem;
+}
+
+
 /* Contact Section */
+
+.section-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.section-contact-links li {
+  /* background-color: var(--dark-blue); */
+  margin: 10px;
+  /* padding: 10px 0px 10px 20px; */
+}
+
+.section-contact-links i {
+  font-size: 4rem;
+  margin-right: 15px;
+}
+
+.section-contact-links a {
+  background-color: var(--dark-blue);
+  color: var(--light-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.6rem;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.section-contact-links a:hover,
+.section-contact-links a:focus {
+  color: var(--red-shade);
+}
 
 /* Footer */
 
