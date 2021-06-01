@@ -347,6 +347,13 @@ section .section-intro {
   margin: 0 10px;
   padding: 10px 15px;
   text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.project-links a:focus,
+.project-links a:hover {
+  border: 2px solid var(--red-shade);
+  color: var(--red-shade);
 }
 
 
