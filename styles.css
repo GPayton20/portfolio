@@ -262,7 +262,6 @@ section .section-intro {
 
 .gallery-item .image-container {
   background-color: var(--dark-grey);
-  background-image: url(./assets/Screen\ Shot\ 2021-05-31\ at\ 10.53.55\ PM.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -276,7 +275,22 @@ section .section-intro {
   overflow: hidden;
 }
 
+.image-container-0 {
+  background-image: url(./assets/katelyns-reading-list.png);
+}
 
+.image-container-1 {
+  background-image: url(./assets/dnd-character-generator.png);
+}
+
+.image-container-2 {
+  background-image: url(./assets/willow.png);
+  background-position: right center;
+}
+
+.image-container-3 {
+  background-image: url(./assets/thrifty-dragon.png);
+}
 
 /* .gallery-item .image-container img {
   margin-top: 80px;
