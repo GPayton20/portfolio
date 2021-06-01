@@ -70,7 +70,7 @@ h3 {
 
 h4 {
   font-size: 3rem;
-  margin: 20px;
+  margin: 10px;
 }
 
 p {
@@ -81,7 +81,19 @@ p {
 }
 
 a {
+  color: var(--light-grey);
+  display: inline-block;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:focus,
+a:hover {
+  color: var(--red-shade);
+}
+
+i {
+  display: inline-block;
 }
 
 /* Header */
@@ -207,7 +219,7 @@ section .section-intro {
 }
 
 .skills-list li {
-  margin: 60px 30px;
+  margin: 30px;
 }
 
 .skills-icon {
@@ -225,45 +237,61 @@ section .section-intro {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* justify-content: space-between; */
   margin-top: 80px;
   width: 100%;
 }
 
 .gallery-item {
-  background-color: var(--light-blue);
-  box-shadow: 5px 5px 0px var(--red-shade);
+  /* background-color: var(--light-blue); */
+  /* box-shadow: 8px 8px 0px var(--red-shade); */
+  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 900px;
-  width: 95%;
+  height: 500px;
+  width: 500px;
+  position: relative;
 }
 
 .gallery-item:not(:first-of-type) {
   margin-top: 40px;
 }
 
-.gallery-item-profile .image-container {
+.gallery-item .image-container {
   background-color: var(--dark-grey);
   /* box-shadow: 5px 5px 0px var(--red-shade); */
-  flex-shrink: 0;
-  height: 500px;
-  width: 40%;
+  border-radius: 50%;
+  height: 75%;
+  width: 75%;
+  position: absolute;
+  top: 0;
+  right: 85%;
 }
 
-.gallery-item-profile .gallery-item-info {
+.gallery-item:nth-of-type(even) .image-container {
+  left: 85%;
+}
+
+.gallery-item .gallery-item-info {
   background-color: var(--light-blue);
+  box-shadow: 8px 8px 0 var(--red-shade);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 40px 25px;
-  height: 100%;
-  width: 60%;
+  padding: 20px;
+  height: 70%;
+  width: 120%;
+  position: absolute;
+  top: 30%;
+  /* left: 50%; */
 }
 
-.gallery-item-profile .gallery-item-info p {
+.gallery-item .gallery-item-info p {
   font-size: 2rem;
+  line-height: 2.6rem;
+  margin: 10px;
 }
 
 .gallery-item-icons {
@@ -274,20 +302,21 @@ section .section-intro {
 
 .gallery-item-icons .skills-icon {
   font-size: 3rem;
-  margin: 10px;
+  margin: 0 10px;
   padding: 10px;
 }
 
 .project-links {
   display: flex;
+  margin-top: 30px;
 }
 
 .project-links a {
   border: 2px solid var(--light-grey);
   color: var(--light-grey);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   letter-spacing: 1.2px;
-  margin: 10px;
+  margin: 0 10px;
   padding: 10px 15px;
   text-transform: uppercase;
 }
