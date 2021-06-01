@@ -71,6 +71,7 @@ h3 {
 h4 {
   font-size: 3rem;
   margin: 10px;
+  text-transform: capitalize;
 }
 
 p {
@@ -116,7 +117,8 @@ header::before {
   width: 600px;
   position: absolute;
   top: 20%;
-  left: 28%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: -1;
 }
 
@@ -226,8 +228,8 @@ section .section-intro {
   background-color: var(--dark-blue);
   border-radius: 50%;
   color: var(--dark-grey);
-  font-size: 10rem;
-  padding: 45px;
+  font-size: 9rem;
+  padding: 35px;
 }
 
 /* Portfolio Section*/
@@ -260,14 +262,26 @@ section .section-intro {
 
 .gallery-item .image-container {
   background-color: var(--dark-grey);
+  background-image: url(./assets/Screen\ Shot\ 2021-05-31\ at\ 10.53.55\ PM.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
   /* box-shadow: 5px 5px 0px var(--red-shade); */
   border-radius: 50%;
   height: 75%;
   width: 75%;
   position: absolute;
-  top: 0;
+  top: 0%;
   right: 85%;
+  overflow: hidden;
 }
+
+
+
+/* .gallery-item .image-container img {
+  margin-top: 80px;
+  transform: scale(2);
+} */
 
 .gallery-item:nth-of-type(even) .image-container {
   left: 85%;
