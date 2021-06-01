@@ -97,6 +97,10 @@ i {
   display: inline-block;
 }
 
+i.work-reference {
+  font-style: italic;
+}
+
 /* Header */
 
 header {
@@ -206,6 +210,10 @@ section .section-intro {
   margin: 0 auto;
   max-width: 770px;
   width: 70%;
+}
+
+.section-intro p {
+  letter-spacing: 0.08rem;
 }
 
 /* Skills Section */
@@ -347,7 +355,7 @@ section .section-intro {
   margin: 0 10px;
   padding: 10px 15px;
   text-transform: uppercase;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .project-links a:focus,
