@@ -510,3 +510,77 @@ footer p {
   }
 
 }
+
+@media (max-width: 540px) {
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 4rem;
+  }
+
+  h4 {
+    font-size:2rem;
+    margin: 5px;
+  }
+
+  p {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+
+  section {
+    padding: 50px 0;
+  }
+
+  section .section-intro {
+    width: 85%;
+  }
+
+  .gallery-item {
+    height: 330px;
+    width: 330px;
+  }
+
+  .gallery-item:not(:first-of-type) {
+    margin-top: 150px;
+  }
+
+  .gallery-item:nth-of-type(odd) .image-container,
+  .gallery-item:nth-of-type(even) .image-container {
+    top: -35%;
+  }
+
+  .gallery-item .gallery-item-info {
+    height: 85%;
+    padding: 10px;
+  }
+
+  .gallery-item .gallery-item-info p {
+    line-height: 2rem;
+    margin: 10px 0;
+  }
+
+  .gallery-item-icons .skills-icon {
+    font-size: 2rem;
+    padding: 8px;
+  }
+
+  .project-links {
+    margin-top: 12px;
+  }
+
+  .project-links a {
+    padding: 5px 10px;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .gallery-item {
+    height: 300px;
+    width: 300px;
+  }
+}
