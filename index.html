@@ -238,8 +238,22 @@
         <p>We've reached the bottom of the page, but this doesn't have to be the end. If you would like to talk code, development opportunities, or even debate which is Akira Kurosawa's best film (the answer is <i class="work-refernce">Ran</i>), I would love to hear from you!</p>
       </div>
 
+      
+      <form name="contact" class="contact" method="POST" data-netlify="true">
+        <label for="name" class="sr-only">Your name:</label>
+        <input type="text" name="name" id="name" placeholder="Name" required>
+        
+        <label for="email" class="sr-only">Your email:</label>
+        <input type="email" name="email" id="email" placeholder="Email" required>
+        
+        <label for="message" class="sr-only">Your message:</label>
+        <textarea name="message" id="message" cols="20" rows="10" placeholder="Message"></textarea>
+        
+        <button type="submit">Send</button>
+      </form>
+
       <div class="wrapper">
-        <ul class="section-contact-links">
+      <!-- <ul class="section-contact-links">
           <li>
             <a href="mailto:geoffrpayton@gmail.com" target="_blank" rel="noreferrer noopener">
               <i class="far fa-envelope" aria-hidden="true"></i>geoffrpayton@gmail.com
@@ -260,7 +274,7 @@
               <i class="fab fa-github" aria-hidden="true"></i>github.com/GPayton20
             </a>
           </li>
-        </ul>
+        </ul> -->
       </div>
     </section>
 

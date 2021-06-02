@@ -170,7 +170,7 @@ header nav li {
 header nav a {
   color: var(--light-grey);
   font-weight: 700;
-  padding: 1rem 2rem;
+  padding-left: 20px;
   position: relative;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
@@ -433,6 +433,57 @@ section .section-intro {
 
 /* Contact Section */
 
+form.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 80px auto 0;
+  width: 70%;
+  max-width: 770px;
+}
+
+form.contact input {
+  margin-bottom: 20px;
+  width: calc(50% - 10px);
+}
+
+form.contact textarea {
+  width: 100%;
+}
+
+form.contact input,
+form.contact textarea {
+  background-color: var(--light-grey);
+  border: none;
+  font-size: 2rem;
+  padding: 10px
+}
+
+form.contact input::placeholder,
+form.contact textarea::placeholder {
+  color: var(--light-blue);
+}
+
+form.contact button {
+  background-color: transparent;
+  border: 5px solid var(--light-grey);
+  color: var(--light-grey);
+  cursor: pointer;
+  font-size: 2.4rem;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+form.contact button:focus,
+form.contact button:hover {
+  border: 5px solid var(--red-shade);
+  color: var(--red-shade);
+}
+
 .section-contact-links {
   display: flex;
   flex-wrap: wrap;
@@ -616,6 +667,10 @@ footer p {
     transform: translateX(-50%);
   }
 
+  form.contact {
+    width: 80%;
+  }
+
   footer p {
     margin: 1rem;
   }
@@ -655,6 +710,10 @@ footer p {
 
   header nav a {
     font-size: 4rem;
+  }
+
+  form.contact input {
+    width: 100%;
   }
 }
 
