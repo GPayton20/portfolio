@@ -681,7 +681,7 @@ footer p {
   /* Hamburger menu styles */
 
   header nav {
-    padding: 2px 10px;
+    padding: 5px 10px;
     position: fixed;
     top: 0;
     left: 0;
@@ -748,6 +748,10 @@ footer p {
 
   header {
     min-height: 400px;
+  }
+
+  header::before {
+    top: 15%;
   }
 
   .header-content {
@@ -818,6 +822,10 @@ footer p {
     padding: 5px 10px;
   }
 
+  form.contact {
+    margin: 40px auto 0;
+  }
+
   .section-contact-links {
     margin-top: 40px;
   }
@@ -833,7 +841,6 @@ footer p {
   header::before {
     height: 250px;
     width: 250px;
-    top: 15%;
   }
 
   .logo {
