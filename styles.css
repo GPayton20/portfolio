@@ -486,3 +486,27 @@ footer p {
   }
 
 }
+
+@media (max-width: 780px) {
+
+  .section-portfolio-gallery {
+    margin-top: 150px;
+  }
+
+  .gallery-item:nth-of-type(odd),
+  .gallery-item:nth-of-type(even) {
+    align-self: center;
+  }
+
+  .gallery-item:not(:first-of-type) {
+    margin-top: 120px;
+  }
+
+  .gallery-item:nth-of-type(odd) .image-container,
+  .gallery-item:nth-of-type(even) .image-container {
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+}
