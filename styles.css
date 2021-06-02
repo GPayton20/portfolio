@@ -673,6 +673,10 @@ footer p {
     line-height: 2.8rem;
   }
 
+  header {
+    min-height: 400px;
+  }
+
   .header-content {
     margin-top: 440px;
     padding-bottom: 50px;
