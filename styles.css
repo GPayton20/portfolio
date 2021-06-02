@@ -135,6 +135,7 @@ header::before {
 }
 
 header nav {
+  background-color: var(--dark-blue);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -159,6 +160,7 @@ header nav {
 
 header nav ul {
   display: flex;
+  transition: transform 0.4s ease-in-out;
 }
 
 header nav li {
@@ -623,6 +625,13 @@ footer p {
 @media (max-width: 650px) {
   /* Hamburger menu styles */
 
+  header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
   .menu-button {
     display: block;
     z-index: 30;
@@ -761,6 +770,14 @@ footer p {
     height: 250px;
     width: 250px;
     top: 15%;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .menu-button {
+    font-size: 3.5rem;
   }
 
   .header-content {
