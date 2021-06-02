@@ -4,9 +4,272 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./assets/logo-small.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/dbf492a47c.js" crossorigin="anonymous"></script>
+  <title>Geoffrey Payton | Front-End Web Developer</title>
 </head>
 <body>
-  <h1></h1>
+
+  <header>
+    <div class="wrapper">
+    
+    <nav>
+      <div class="logo">
+        <img src="./assets/logo-large-transparent.png" alt="logo">
+      </div>
+      <button id="menu-button" class="menu-button" aria-label="Open and close navigation menu">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <ul id="navMenu">
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-content">
+      <h1>Geoffrey Payton</h1>
+      <!-- <div class="section-intro"> -->
+        <!-- <h2>Introduction</h2> -->
+        <h3>Front-End web developer</h3>
+        <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut voluptatum ab tempore odio soluta assumenda dolore dolorem explicabo odit, obcaecati dolor recusandae sit accusantium debitis!</p> -->
+      <!-- </div> -->
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section-skills" id="skills">
+      <div class="section-intro">
+        <h2>Skills</h2>
+        <h3>What I provide</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus perferendis quod, eveniet, tempore officiis unde adipisci quidem fugiat dolorum possimus eius fugit, facere molestias dicta?</p>
+      </div>
+        <ul class="skills-list">
+          <li>
+            <span class="sr-only">HTML 5</span>
+            <i class="devicon-html5-plain-wordmark skills-icon"></i>
+          </li>
+          <li>
+            <span class="sr-only">CSS 3</span>
+            <i class="devicon-css3-plain-wordmark skills-icon"></i>
+          </li>
+          <li>
+            <span class="sr-only">Sass</span>
+            <i class="devicon-sass-original skills-icon"></i>
+          </li>
+          <li>
+            <span class="sr-only">JavaScript</span>
+            <i class="devicon-javascript-plain skills-icon"></i>
+          </li>
+          <li>
+            <span class="sr-only">React</span>
+            <i class="devicon-react-original skills-icon"></i>
+          </li>
+          <li>
+            <span class="sr-only">Git</span>
+            <i class="devicon-git-plain skills-icon"></i>
+          </li>
+          <li>
+            <span class="sr-only">GitHub</span>
+            <i class="devicon-github-original skills-icon"></i>
+          </li>
+          <li>
+            <span class="sr-only">Visual Studio</span>
+            <i class="devicon-visualstudio-plain skills-icon"></i>
+          </li>
+          <li>
+            <span class="sr-only">Firebase</span>
+            <i class="devicon-firebase-plain skills-icon"></i>
+          </li>
+        </ul>
+    </section>
+
+    <section class="section-portfolio" id="portfolio">
+      <!-- todo Delete unused img elements -->
+      <div class="section-intro">
+        <h2>Portfolio</h2>
+        <h3>My collection</h3>
+        <p>Okay okay, enough talk. Here are a few of my favourite projects I have worked on. I always have something on the back burner, so check back to see if there's something new!</p>
+      </div>
+      
+      <div class="wrapper">
+        <ul class="section-portfolio-gallery">
+          
+          <li class="gallery-item">
+            <div class="image-container image-container-0">
+              <!-- <img src="./assets/Screen Shot 2021-05-31 at 10.53.55 PM.png" alt=""> -->
+            </div>
+            
+            <article class="gallery-item-info">
+              <h4>Katelyn's Book Nook</h4>
+              <p>A fun reading-list app! Add the books you want to read, and see the ones you have already finished so you can track your progress. Lists are stored in Firebase database.</p>
+              <ul class="gallery-item-icons">
+                <li>
+                  <span class="sr-only">HTML 5</span>
+                  <i class="devicon-html5-plain-wordmark skills-icon"></i>
+                </li>
+                <li>
+                  <span class="sr-only">CSS 3</span>
+                  <i class="devicon-css3-plain-wordmark skills-icon"></i>
+                </li>
+                <li>
+                  <span class="sr-only">React</span>
+                  <i class="devicon-react-original skills-icon"></i>
+                </li>
+                <li>
+                  <span class="sr-only">Firebase</span>
+                  <i class="devicon-firebase-plain skills-icon"></i>
+                </li>
+              </ul>
+              <ul class="project-links">
+                <li><a href="">View live</a></li>
+                <li><a href="https://github.com/GPayton20/katelynsBookNook" target="_blank" rel="noopener">View code</a></li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="gallery-item">
+            <div class="image-container image-container-3">
+              <img src="" alt="">
+            </div>
+          
+            <article class="gallery-item-info">
+              <h4>Thrifty Dragon</h4>
+              <p>Video games are expensive. Thrifty Dragon lets you search for games and find the lowest available price, saving
+                you money to buy even more games! Created with Jonathan Ledo.</p>
+              <ul class="gallery-item-icons">
+                <li>
+                  <span class="sr-only">HTML 5</span>
+                  <i class="devicon-html5-plain-wordmark skills-icon"></i>
+                </li>
+                <li>
+                  <span class="sr-only">CSS 3</span>
+                  <i class="devicon-css3-plain-wordmark skills-icon"></i>
+                </li>
+                <li>
+                  <span class="sr-only">Sass</span>
+                  <i class="devicon-sass-original skills-icon"></i>
+                </li>
+                <li>
+                  <span class="sr-only">JavaScript</span>
+                  <i class="devicon-javascript-plain skills-icon"></i>
+                </li>
+              </ul>
+              <ul class="project-links">
+                <li><a href="https://geoffjon.github.io/thriftyDragon/" target="_blank" rel="noopener">View live</a></li>
+                <li><a href="https://github.com/GeoffJon/thriftyDragon" target="_blank" rel="noopener">View code</a></li>
+              </ul>
+            </article>
+          </li>
+          
+          <li class="gallery-item">
+            <div class="image-container image-container-2">
+              <!-- <img src="./assets/Screen Shot 2021-05-31 at 10.53.55 PM.png" alt=""> -->
+            </div>
+
+            <article class="gallery-item-info">
+              <h4>Willow</h4>
+              <p>A fully responsive multi-page personal website, built to perfectly match a provided design. I liked my work so much, I hired myself to build my own website.</p>
+              <ul class="gallery-item-icons">
+                <li>
+                  <span class="sr-only">HTML 5</span>
+                  <i class="devicon-html5-plain-wordmark skills-icon"></i>
+                </li>
+                <li>
+                  <span class="sr-only">CSS 3</span>
+                  <i class="devicon-css3-plain-wordmark skills-icon"></i>
+                </li>
+                <li>
+                  <span class="sr-only">Sass</span>
+                  <i class="devicon-sass-original skills-icon"></i>
+                </li>
+              </ul>
+              <ul class="project-links">
+                <li><a href="https://gpayton20.github.io/willow/" target="_blank" rel="noopener">View live</a></li>
+                <li><a href="https://github.com/GPayton20/willow" target="_blank" rel="noopener">View code</a></li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="gallery-item">
+            <div class="image-container image-container-1">
+              <img src="" alt="">
+            </div>
+            
+            <article class="gallery-item-info">
+              <h4>D&D Character Generator</h4>
+              <p>It's <i class="work-reference">Dungeons & Dragons</i> night, and your half-elf Ranger just got incinerated by a beholder. This app will access the D&D 5e API to quickly create a new character for you!</p>
+              <ul class="gallery-item-icons">
+                <li>
+                  <span class="sr-only">HTML 5</span>
+                  <i class="devicon-html5-plain-wordmark skills-icon"></i>
+                </li>
+                <li>
+                  <span class="sr-only">CSS 3</span>
+                  <i class="devicon-css3-plain-wordmark skills-icon"></i>
+                </li>
+                <li>
+                  <span class="sr-only">JavaScript</span>
+                  <i class="devicon-javascript-plain skills-icon"></i>
+                </li>
+              </ul>
+              <ul class="project-links">
+                <li><a href="https://gpayton20.github.io/dndCharacterGenerator/" target="_blank" rel="noopener">View live</a></li>
+                <li><a href="https://github.com/GPayton20/dndCharacterGenerator" target="_blank" rel="noopener">View code</a></li>
+              </ul>
+            </article>
+          </li>
+          
+        </ul>
+      </div>
+    
+    </section>
+
+    <section class="section-contact" id="contact">
+      <div class="section-intro">
+        <h2>Get in touch</h2>
+        <h3>How to contact me</h3>
+        <p>We've reached the bottom of the page, but this doesn't have to be the end. If you would like to talk code, development opportunities, or even debate which is Akira Kurosawa's best film (the answer is <i class="work-refernce">Ran</i>), I would love to hear from you!</p>
+      </div>
+
+      <div class="wrapper">
+        <ul class="section-contact-links">
+          <li>
+            <a href="mailto:geoffrpayton@gmail.com" target="_blank" rel="noreferrer noopener">
+              <i class="far fa-envelope" aria-hidden="true"></i>geoffrpayton@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/GeoffreyPayton" target="_blank" rel="noreferrer noopener">
+              <i class="fab fa-twitter" aria-hidden="true"></i>@GeoffreyPayton
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/geoffrey-payton/">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>linkedin.com/in/geoffrey-payton
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/GPayton20" target="_blank" rel="noreferrer noopener">
+              <i class="fab fa-github" aria-hidden="true"></i>github.com/GPayton20
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Copyright &copy 2021 Geoffrey Payton</p>
+  </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>
