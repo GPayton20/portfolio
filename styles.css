@@ -489,6 +489,23 @@ footer p {
 
 @media (max-width: 780px) {
 
+  section {
+    padding: 80px 0;
+  }
+
+  section .section-intro {
+    width: 80%;
+  }
+
+  .skills-list li {
+    margin: 20px;
+  }
+
+  .skills-icon {
+    font-size: 7rem;
+    padding: 25px;
+  }
+
   .section-portfolio-gallery {
     margin-top: 150px;
   }
@@ -537,6 +554,19 @@ footer p {
 
   section .section-intro {
     width: 85%;
+  }
+
+  .skills-list {
+    margin-top: 40px;
+  }
+
+  .skills-list li {
+    margin: 10px;
+  }
+
+  .skills-icon {
+    font-size: 5rem;
+    padding: 20px;
   }
 
   .gallery-item {
