@@ -321,20 +321,20 @@ section .section-intro {
 }
 
 .image-container-0 {
-  background-image: url(./assets/katelyns-reading-list.png);
+  background-image: url(./assets/katelyns-reading-list-2.jpg);
 }
 
 .image-container-1 {
-  background-image: url(./assets/dnd-character-generator.png);
+  background-image: url(./assets/dnd-character-generator\ copy.jpg);
 }
 
 .image-container-2 {
-  background-image: url(./assets/willow.png);
+  background-image: url(./assets/willow3.jpg);
   background-position: right center;
 }
 
 .image-container-3 {
-  background-image: url(./assets/thrifty-dragon.png);
+  background-image: url(./assets/thrifty-dragon\ copy.jpg);
 }
 
 .gallery-item .gallery-item-info {
@@ -442,7 +442,7 @@ form.contact button {
   cursor: pointer;
   font-size: 2.4rem;
   margin: 20px auto 0;
-  padding: 10px 20px;
+  padding: 10px 30px;
   text-align: center;
   text-transform: uppercase;
   transition: all 0.3s ease;
