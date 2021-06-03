@@ -126,11 +126,19 @@ i {
   }
 }
 
+@keyframes pop-in {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 
 /* Header */
 
 header {
-  min-height: 800px;
   padding-top: 20px;
   position: relative;
 }
@@ -138,7 +146,7 @@ header {
 header::before {
   content: '';
   background-color: var(--light-blue);
-  background-image: url(./assets/portrait2.jpg);
+  background-image: url(./assets/portrait.jpg);
   background-size: cover;
   background-position: 50% 30%;
   border-radius: 50%;
@@ -297,6 +305,11 @@ section.section-about {
 
 .skills-list li {
   margin: 30px;
+  transform: scale(0);
+}
+
+.skills-list .pop-in {
+  animation: pop-in 0.4s cubic-bezier(0.18, -0.25, 0.5, 1.55) forwards;
 }
 
 .skills-icon {
@@ -357,20 +370,20 @@ section.section-about {
 }
 
 .image-container-0 {
-  background-image: url(./assets/katelyns-reading-list-2.jpg);
+  background-image: url(./assets/katelyns-book-nook.jpg);
 }
 
 .image-container-1 {
-  background-image: url(./assets/dnd-character-generator\ copy.jpg);
+  background-image: url(./assets/dnd-character-generator.jpg);
 }
 
 .image-container-2 {
-  background-image: url(./assets/willow3.jpg);
+  background-image: url(./assets/willow.jpg);
   background-position: right center;
 }
 
 .image-container-3 {
-  background-image: url(./assets/thrifty-dragon\ copy.jpg);
+  background-image: url(./assets/thrifty-dragon.jpg);
 }
 
 .gallery-item .gallery-item-info {
@@ -389,10 +402,12 @@ section.section-about {
 
 .gallery-item:nth-of-type(odd)  .gallery-item-info {
   border-right: 5px solid var(--red-shade);
+  box-shadow: -5px -5px 10px rgba(0,0,0,0.3);
 }
 
 .gallery-item:nth-of-type(even) .gallery-item-info {
   border-left: 5px solid var(--red-shade);
+  box-shadow: 5px -5px 10px rgba(0,0,0,0.3);
 }
 
 .gallery-item .gallery-item-info p {
@@ -462,6 +477,7 @@ form.contact input,
 form.contact textarea {
   background-color: var(--light-grey);
   border: none;
+  border-bottom: 5px solid var(--red-shade);
   font-size: 2rem;
   padding: 10px
 }
@@ -473,7 +489,7 @@ form.contact textarea::placeholder {
 
 form.contact button {
   background-color: transparent;
-  border: 5px solid var(--light-grey);
+  border: 3px solid var(--light-grey);
   color: var(--light-grey);
   cursor: pointer;
   font-size: 2.4rem;
@@ -486,7 +502,7 @@ form.contact button {
 
 form.contact button:focus,
 form.contact button:hover {
-  border: 5px solid var(--red-shade);
+  border: 3px solid var(--red-shade);
   color: var(--red-shade);
 }
 
@@ -671,6 +687,10 @@ footer p {
     transform: translateX(-50%);
   }
 
+  .gallery-item .gallery-item-info {
+    box-shadow: 0px -5px 10px rgba(0,0,0,0.3);
+  }
+
   form.contact {
     width: 80%;
   }
@@ -715,6 +735,18 @@ footer p {
     z-index: 20;
 
     transform: translateX(700px);
+  }
+
+  header nav ul::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: url(./assets/logo-large-transparent.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    opacity: 0.25;
+    position: absolute;
   }
 
   header nav a {
