@@ -138,7 +138,7 @@ header {
 header::before {
   content: '';
   background-color: var(--light-blue);
-  background-image: url(./assets/portrait2.jpg);
+  background-image: url(./assets/portrait.jpg);
   background-size: cover;
   background-position: 50% 30%;
   border-radius: 50%;
@@ -357,20 +357,20 @@ section.section-about {
 }
 
 .image-container-0 {
-  background-image: url(./assets/katelyns-reading-list-2.jpg);
+  background-image: url(./assets/katelyns-book-nook.jpg);
 }
 
 .image-container-1 {
-  background-image: url(./assets/dnd-character-generator\ copy.jpg);
+  background-image: url(./assets/dnd-character-generator.jpg);
 }
 
 .image-container-2 {
-  background-image: url(./assets/willow3.jpg);
+  background-image: url(./assets/willow.jpg);
   background-position: right center;
 }
 
 .image-container-3 {
-  background-image: url(./assets/thrifty-dragon\ copy.jpg);
+  background-image: url(./assets/thrifty-dragon.jpg);
 }
 
 .gallery-item .gallery-item-info {
@@ -462,6 +462,7 @@ form.contact input,
 form.contact textarea {
   background-color: var(--light-grey);
   border: none;
+  border-bottom: 5px solid var(--red-shade);
   font-size: 2rem;
   padding: 10px
 }
