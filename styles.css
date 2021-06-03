@@ -101,9 +101,6 @@ i {
   display: inline-block;
 }
 
-i.work-reference {
-  font-style: italic;
-}
 
 /* Header */
 
@@ -165,7 +162,7 @@ header nav li {
 header nav a {
   color: var(--light-grey);
   font-weight: 700;
-  padding-left: 20px;
+  padding: 10px 20px;
   position: relative;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
