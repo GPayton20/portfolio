@@ -108,7 +108,6 @@ i.work-reference {
 /* Header */
 
 header {
-  /* height: 100vh; */
   min-height: 800px;
   padding-top: 20px;
   position: relative;
@@ -121,10 +120,6 @@ header::before {
   background-size: cover;
   background-position: 50% 30%;
   border-radius: 50%;
-  /* height: 52vw;
-  width: 52vw;
-  max-height: 520px;
-  max-width: 520px; */
   height: 520px;
   width: 520px;
   position: absolute;
@@ -170,7 +165,7 @@ header nav li {
 header nav a {
   color: var(--light-grey);
   font-weight: 700;
-  padding: 1rem 2rem;
+  padding-left: 20px;
   position: relative;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
@@ -209,37 +204,25 @@ header nav a:focus::after {
 }
 
 .header-content h1 {
-  /* min-width: 415px; */
-  /* max-width: 35%; */
   border-left: 5px solid var(--red-shade);
   border-bottom: 5px solid var(--red-shade);
-  /* padding-left: 20px; */
   width: 480px;
 }
 
 .header-content h3 {
-  /* align-self: flex-end; */
   border-right: 5px solid var(--red-shade);
   border-bottom: 5px solid var(--red-shade);
-  /* padding-right: 20px; */
   text-align: right;
   width: 480px;
 }
 
 header h1,
 header h3 {
-  /* background-color: var(--light-blue);
-  box-shadow: 8px 8px 0 var(--red-shade);
-  padding: 0.1em 0.2em; */
   margin: 0px 0px 80px;
   padding: 0 20px;
   text-shadow: 4px 4px 1px var(--light-blue);
-  /* border-left: 5px solid var(--red-shade); */
 }
 
-/* .header-content .section-intro {
-  width: 30%;
-} */
 
 /* Sections */
 
@@ -294,19 +277,11 @@ section .section-intro {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* justify-content: space-between; */
   margin-top: 100px;
   width: 100%;
 }
 
 .gallery-item {
-  /* background-color: var(--light-blue); */
-  /* box-shadow: 8px 8px 0px var(--red-shade); */
-  /* border: 1px solid red; */
-  /* todo flex needed here? */
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 600px;
   width: 600px;
   position: relative;
@@ -329,7 +304,6 @@ section .section-intro {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-  /* box-shadow: 5px 5px 0px var(--red-shade); */
   border-radius: 50%;
   height: 70%;
   width: 70%;
@@ -360,12 +334,6 @@ section .section-intro {
   background-image: url(./assets/thrifty-dragon.png);
 }
 
-/* .gallery-item .image-container img {
-  margin-top: 80px;
-  transform: scale(2);
-} */
-
-
 .gallery-item .gallery-item-info {
   background-color: var(--light-blue);
   /* box-shadow: 8px 8px 0 var(--red-shade); */
@@ -379,7 +347,6 @@ section .section-intro {
   width: 100%;
   position: absolute;
   bottom: 0;
-  /* left: 50%; */
 }
 
 .gallery-item:nth-of-type(odd)  .gallery-item-info {
@@ -433,6 +400,57 @@ section .section-intro {
 
 /* Contact Section */
 
+form.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 80px auto 0;
+  width: 70%;
+  max-width: 770px;
+}
+
+form.contact input {
+  margin-bottom: 20px;
+  width: calc(50% - 10px);
+}
+
+form.contact textarea {
+  width: 100%;
+}
+
+form.contact input,
+form.contact textarea {
+  background-color: var(--light-grey);
+  border: none;
+  font-size: 2rem;
+  padding: 10px
+}
+
+form.contact input::placeholder,
+form.contact textarea::placeholder {
+  color: var(--light-blue);
+}
+
+form.contact button {
+  background-color: transparent;
+  border: 5px solid var(--light-grey);
+  color: var(--light-grey);
+  cursor: pointer;
+  font-size: 2.4rem;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+form.contact button:focus,
+form.contact button:hover {
+  border: 5px solid var(--red-shade);
+  color: var(--red-shade);
+}
+
 .section-contact-links {
   display: flex;
   flex-wrap: wrap;
@@ -442,9 +460,7 @@ section .section-intro {
 }
 
 .section-contact-links li {
-  /* background-color: var(--dark-blue); */
   margin: 10px;
-  /* padding: 10px 0px 10px 20px; */
 }
 
 .section-contact-links i {
@@ -616,6 +632,10 @@ footer p {
     transform: translateX(-50%);
   }
 
+  form.contact {
+    width: 80%;
+  }
+
   footer p {
     margin: 1rem;
   }
@@ -626,10 +646,15 @@ footer p {
   /* Hamburger menu styles */
 
   header nav {
+    padding: 5px 10px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
+  }
+
+  .logo {
+    width: 50px;
   }
 
   .menu-button {
@@ -655,6 +680,10 @@ footer p {
 
   header nav a {
     font-size: 4rem;
+  }
+
+  form.contact input {
+    width: 100%;
   }
 }
 
@@ -684,6 +713,10 @@ footer p {
 
   header {
     min-height: 400px;
+  }
+
+  header::before {
+    top: 15%;
   }
 
   .header-content {
@@ -754,6 +787,10 @@ footer p {
     padding: 5px 10px;
   }
 
+  form.contact {
+    margin: 40px auto 0;
+  }
+
   .section-contact-links {
     margin-top: 40px;
   }
@@ -769,7 +806,6 @@ footer p {
   header::before {
     height: 250px;
     width: 250px;
-    top: 15%;
   }
 
   .logo {
