@@ -301,6 +301,7 @@ section.section-about {
 .skills-icon {
   background-color: var(--dark-blue);
   border-radius: 50%;
+  box-shadow: 2px 2px 2px var(--red-shade);
   color: var(--dark-grey);
   font-size: 9rem;
   padding: 35px;
@@ -406,6 +407,7 @@ section.section-about {
 }
 
 .gallery-item-icons .skills-icon {
+  box-shadow: 1px 1px 1px var(--red-shade);
   font-size: 3rem;
   margin: 0 10px;
   padding: 10px;
