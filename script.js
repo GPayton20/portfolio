@@ -17,11 +17,12 @@ app.init = () => {
   app.buildIntersectionObserver();
 }
 
+// Method to allow skill icons to 'pop' in on scroll
 app.buildIntersectionObserver = () => {
-  // Observer coversv viewport
+  // Observer covers viewport, waits until target has passed 70px from bottom on scroll
   app.options = {
     root: null,
-    rootMargin: '0px 0px -50px 0px',
+    rootMargin: '0px 0px -70px 0px',
     threshold: 1
   }
 
@@ -38,9 +39,9 @@ app.popIn = entries => {
   entries.forEach(entry => {
     // Let skills icons "pop" into view as they pass observer threshold
     if (entry.isIntersecting) {
-      // todo delete console log
-      console.log('Intersecting!');
       entry.target.classList.add('pop-in');
+      // Stop observing once icon is visible
+      app.observer.unobserve(entry.target);
     }
   })
 }
