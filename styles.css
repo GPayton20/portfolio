@@ -126,6 +126,15 @@ i {
   }
 }
 
+@keyframes pop-in {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 
 /* Header */
 
@@ -296,6 +305,11 @@ section.section-about {
 
 .skills-list li {
   margin: 30px;
+  transform: scale(0);
+}
+
+.skills-list .pop-in {
+  animation: pop-in 0.4s cubic-bezier(0.18, -0.55, 0.265, 1.85) forwards;
 }
 
 .skills-icon {
