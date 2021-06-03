@@ -718,6 +718,18 @@ footer p {
     transform: translateX(700px);
   }
 
+  header nav ul::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: url(./assets/logo-large-transparent.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    opacity: 0.25;
+    position: absolute;
+  }
+
   header nav a {
     font-size: 4rem;
   }
