@@ -26,6 +26,7 @@ html {
   color: var(--light-grey);
   font-family: 'Open sans', sans-serif;
   font-size: 62.5%;
+  scroll-padding-top: 40px;
 }
 
 body {
