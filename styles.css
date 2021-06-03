@@ -192,7 +192,7 @@ header nav li {
 header nav a {
   color: var(--light-grey);
   font-weight: 700;
-  padding: 10px 20px;
+  padding: 10px 15px;
   position: relative;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -262,7 +262,7 @@ section {
   text-align: center;
 }
 
-section:nth-of-type(odd) {
+section:nth-of-type(even) {
   background-color: var(--light-blue);
 }
 
@@ -274,6 +274,12 @@ section .section-intro {
 
 .section-intro p {
   letter-spacing: 0.08rem;
+}
+
+/* About Section */
+
+section.section-about {
+  background-color: transparent;
 }
 
 /* Skills Section */
@@ -592,7 +598,7 @@ footer p {
   }
 
   header nav li {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .header-content {
