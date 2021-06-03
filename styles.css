@@ -130,7 +130,6 @@ i {
 /* Header */
 
 header {
-  min-height: 800px;
   padding-top: 20px;
   position: relative;
 }
@@ -389,10 +388,12 @@ section.section-about {
 
 .gallery-item:nth-of-type(odd)  .gallery-item-info {
   border-right: 5px solid var(--red-shade);
+  box-shadow: -5px -5px 10px rgba(0,0,0,0.3);
 }
 
 .gallery-item:nth-of-type(even) .gallery-item-info {
   border-left: 5px solid var(--red-shade);
+  box-shadow: 5px -5px 10px rgba(0,0,0,0.3);
 }
 
 .gallery-item .gallery-item-info p {
@@ -670,6 +671,10 @@ footer p {
     top: -15%;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .gallery-item .gallery-item-info {
+    box-shadow: 0px -5px 10px rgba(0,0,0,0.3);
   }
 
   form.contact {
