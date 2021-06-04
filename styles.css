@@ -737,8 +737,6 @@ footer p {
     width: 100vw;
     z-index: 20;
 
-    /* todo Display none is cancelling out animation, but it's better to be accessible than flashy, at least until I figure out how to do both */
-    /* display: none; */
     transform: translateX(700px);
   }
 

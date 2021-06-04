@@ -1,6 +1,5 @@
 const app = {};
 
-
 // Query elements needed to trap focus inside menu when modal is open
 // And to mke hidden links unfocusable
 app.menuButton = document.getElementById('menu-button');
@@ -23,17 +22,9 @@ app.init = () => {
     // Make list visible and links focusable when menu button is clicked
     if (app.navMenu.classList.contains('menu-visible')) {
       document.addEventListener('keydown', app.trapFocus);
-      // app.navMenu.style.display = 'flex';
-      // app.focusableElements.forEach(item => {
-      //   item.tabIndex = '0';
-      // });
       app.menuTabIndex(true);
     } else {
       document.removeEventListener('keydown', app.trapFocus);
-      // app.navMenu.style.display = 'none';
-      // app.focusableElements.forEach(item => {
-      //   item.tabIndex = '-1';
-      // });
       app.menuTabIndex(false);
     }
   });
@@ -42,10 +33,6 @@ app.init = () => {
   app.navMenu.addEventListener('click', () => {
     if (app.navMenu.classList.contains('menu-visible')) {
       app.navMenu.classList.remove('menu-visible');
-      // app.navMenu.style.display = 'none';
-      // app.focusableElements.forEach(item => {
-      //   item.tabIndex = '-1';
-      // });
       app.menuTabIndex(false);
     }
   });
