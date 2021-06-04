@@ -1,9 +1,10 @@
 const app = {};
 
-// Query elements from DOM
+
+// Query elements needed to trap focus inside menu when modal is open
+// And to mke hidden links unfocusable
 app.menuButton = document.getElementById('menu-button');
 app.navMenu = document.getElementById('navMenu');
-// Query elements needed to trap focus inside menu when modal is open
 app.firstElement = app.menuButton;
 app.focusableElements = app.navMenu.querySelectorAll('[href]');
 app.lastElement = app.focusableElements[app.focusableElements.length - 1];
@@ -12,16 +13,21 @@ app.init = () => {
   app.menuButton.addEventListener('click', () => {
     app.navMenu.classList.toggle('menu-visible');
 
+    // Make list visible and links focusable when menu button is clicked
     if (app.navMenu.classList.contains('menu-visible')) {
       document.addEventListener('keydown', app.trapFocus);
+      app.navMenu.style.display = 'flex';
     } else {
       document.removeEventListener('keydown', app.trapFocus);
+      app.navMenu.style.display = 'none';
     }
   });
   
+  // Close hamburger menu when a link is clicked and make links unfocusable
   app.navMenu.addEventListener('click', () => {
     if (app.navMenu.classList.contains('menu-visible')) {
       app.navMenu.classList.remove('menu-visible');
+      app.navMenu.style.display = 'none';
     }
   });
 
@@ -29,6 +35,7 @@ app.init = () => {
 }
 
 // Function to trap focus inside hamburger menu so user cannot tab outside
+// Inspired by this post: https://uxdesign.cc/how-to-trap-focus-inside-modal-to-make-it-ada-compliant-6a50f9a70700
 app.trapFocus = event => {
   const tabPressed = event.key === 'Tab' || event.keyCode === 9;
 
