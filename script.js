@@ -10,16 +10,31 @@ app.focusableElements = app.navMenu.querySelectorAll('[href]');
 app.lastElement = app.focusableElements[app.focusableElements.length - 1];
 
 app.init = () => {
+
+  app.checkWidth();
+  
+  window.addEventListener('resize', () => {
+    app.checkWidth();
+  })
+
   app.menuButton.addEventListener('click', () => {
     app.navMenu.classList.toggle('menu-visible');
 
     // Make list visible and links focusable when menu button is clicked
     if (app.navMenu.classList.contains('menu-visible')) {
       document.addEventListener('keydown', app.trapFocus);
-      app.navMenu.style.display = 'flex';
+      // app.navMenu.style.display = 'flex';
+      // app.focusableElements.forEach(item => {
+      //   item.tabIndex = '0';
+      // });
+      app.menuTabIndex(true);
     } else {
       document.removeEventListener('keydown', app.trapFocus);
-      app.navMenu.style.display = 'none';
+      // app.navMenu.style.display = 'none';
+      // app.focusableElements.forEach(item => {
+      //   item.tabIndex = '-1';
+      // });
+      app.menuTabIndex(false);
     }
   });
   
@@ -27,7 +42,11 @@ app.init = () => {
   app.navMenu.addEventListener('click', () => {
     if (app.navMenu.classList.contains('menu-visible')) {
       app.navMenu.classList.remove('menu-visible');
-      app.navMenu.style.display = 'none';
+      // app.navMenu.style.display = 'none';
+      // app.focusableElements.forEach(item => {
+      //   item.tabIndex = '-1';
+      // });
+      app.menuTabIndex(false);
     }
   });
 
@@ -86,6 +105,25 @@ app.popIn = entries => {
       app.observer.unobserve(entry.target);
     }
   })
+}
+
+// Method to assign tabIndex of nav menu links
+app.menuTabIndex = value => {
+  app.focusableElements.forEach(link => {
+    if (value) {
+      link.tabIndex = '0';
+    }
+    else {
+      link.tabIndex = '-1';
+    }
+  })
+}
+
+// Method to check window size and make menu links unfocusable on small screen sizes
+app.checkWidth = () => {
+  if (window.innerWidth <= 650) {
+    app.menuTabIndex(false);
+  }
 }
 
 app.init();
