@@ -3,6 +3,7 @@ const app = {};
 app.menuButton = document.getElementById('menu-button');
 app.navMenu = document.getElementById('navMenu');
 
+
 app.init = () => {
   app.menuButton.addEventListener('click', () => {
     app.navMenu.classList.toggle('menu-visible');
