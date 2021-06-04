@@ -67,7 +67,9 @@ h2 {
   text-transform: uppercase;
 }
 
-h3 {
+h3,
+.header-content h2 {
+  color: var(--light-grey);
   font-size: 5.8rem;
   margin: 3rem 0;
   text-transform: capitalize;
@@ -248,7 +250,7 @@ header nav a:focus::after {
   animation: fade-from-left 0.5s ease-in-out;
 }
 
-.header-content h3 {
+.header-content h2 {
   border-right: 5px solid var(--red-shade);
   border-bottom: 5px solid var(--red-shade);
   text-align: right;
@@ -257,8 +259,8 @@ header nav a:focus::after {
   animation: fade-from-right 0.5s ease-in-out;
 }
 
-header h1,
-header h3 {
+.header-content h1,
+.header-content h2 {
   margin: 0px 0px 80px;
   padding: 0 20px;
   text-shadow: 4px 4px 1px var(--light-blue);
@@ -562,11 +564,11 @@ footer p {
   }
 
   .header-content h1,
-  .header-content h3 {
+  .header-content h2 {
     width: 420px;
   }
 
-  .header-content h3 {
+  .header-content h2 {
     font-size: 5rem;
   }
 
@@ -586,7 +588,7 @@ footer p {
   }
 
   .header-content h1,
-  .header-content h3 {
+  .header-content h2 {
     width: 820px;
   }
 
@@ -625,12 +627,12 @@ footer p {
     margin-top: 400px;
   }
 
-  .header-content h3 {
+  .header-content h2 {
     font-size: 4.6rem;
   }
 
   .header-content h1,
-  .header-content h3 {
+  .header-content h2 {
     width: 90%;
   }
 
@@ -735,6 +737,7 @@ footer p {
     width: 100vw;
     z-index: 20;
 
+    /* todo Display none is cancelling out animation, but it's better to be accessible than flashy, at least until I figure out how to do both */
     display: none;
     transform: translateX(700px);
   }
@@ -797,7 +800,7 @@ footer p {
     padding-bottom: 50px;
   }
 
-  .header-content h3 {
+  .header-content h2 {
     font-size: 3.5rem;
     margin: 0;
   }
