@@ -1,21 +1,68 @@
 const app = {};
 
+// Query elements needed to trap focus inside menu when modal is open
+// And to mke hidden links unfocusable
 app.menuButton = document.getElementById('menu-button');
 app.navMenu = document.getElementById('navMenu');
-
+app.firstElement = app.menuButton;
+app.focusableElements = app.navMenu.querySelectorAll('[href]');
+app.lastElement = app.focusableElements[app.focusableElements.length - 1];
 
 app.init = () => {
+
+  app.checkWidth();
+  
+  window.addEventListener('resize', () => {
+    app.checkWidth();
+  })
+
   app.menuButton.addEventListener('click', () => {
     app.navMenu.classList.toggle('menu-visible');
+
+    // Make list visible and links focusable when menu button is clicked
+    if (app.navMenu.classList.contains('menu-visible')) {
+      document.addEventListener('keydown', app.trapFocus);
+      app.menuTabIndex(true);
+    } else {
+      document.removeEventListener('keydown', app.trapFocus);
+      app.menuTabIndex(false);
+    }
   });
   
+  // Close hamburger menu when a link is clicked and make links unfocusable
   app.navMenu.addEventListener('click', () => {
     if (app.navMenu.classList.contains('menu-visible')) {
       app.navMenu.classList.remove('menu-visible');
+      app.menuTabIndex(false);
     }
   });
 
   app.buildIntersectionObserver();
+}
+
+// Function to trap focus inside hamburger menu so user cannot tab outside
+// Inspired by this post: https://uxdesign.cc/how-to-trap-focus-inside-modal-to-make-it-ada-compliant-6a50f9a70700
+app.trapFocus = event => {
+  const tabPressed = event.key === 'Tab' || event.keyCode === 9;
+
+  // If tab key is not pressed, do nothing
+  if (!tabPressed) {
+    return;
+  }
+  // Check if shift key is pressed along with tab
+  if (event.shiftKey) {
+    // If focus is currently on the first focusable element (menu button), move focus to last focusable element (last link in menu)
+    if (document.activeElement === app.firstElement) {
+      app.lastElement.focus();
+      event.preventDefault();
+    }
+  } else {
+    // If focus is currently on last element and shift is not pressed, move focus back to first focusable element
+    if (document.activeElement === app.lastElement) {
+      app.firstElement.focus();
+      event.preventDefault();
+    }
+  }
 }
 
 // Method to allow skill icons to 'pop' in on scroll
@@ -45,6 +92,25 @@ app.popIn = entries => {
       app.observer.unobserve(entry.target);
     }
   })
+}
+
+// Method to assign tabIndex of nav menu links
+app.menuTabIndex = value => {
+  app.focusableElements.forEach(link => {
+    if (value) {
+      link.tabIndex = '0';
+    }
+    else {
+      link.tabIndex = '-1';
+    }
+  })
+}
+
+// Method to check window size and make menu links unfocusable on small screen sizes
+app.checkWidth = () => {
+  if (window.innerWidth <= 650) {
+    app.menuTabIndex(false);
+  }
 }
 
 app.init();
