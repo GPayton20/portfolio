@@ -360,8 +360,8 @@ section.section-about {
   background-repeat: no-repeat;
   background-position: center top;
   border-radius: 50%;
-  height: 80%;
-  width: 80%;
+  height: 70%;
+  width: 70%;
   position: absolute;
   top: 0%;
   right: 75%;
@@ -843,6 +843,8 @@ footer p {
   .gallery-item:nth-of-type(odd) .image-container,
   .gallery-item:nth-of-type(even) .image-container {
     top: -40%;
+    height: 80%;
+    width: 80%;
   }
 
   .gallery-item .gallery-item-info {
