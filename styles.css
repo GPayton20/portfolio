@@ -360,8 +360,8 @@ section.section-about {
   background-repeat: no-repeat;
   background-position: center top;
   border-radius: 50%;
-  height: 70%;
-  width: 70%;
+  height: 80%;
+  width: 80%;
   position: absolute;
   top: 0%;
   right: 75%;
@@ -416,6 +416,10 @@ section.section-about {
   font-size: 2rem;
   line-height: 2.6rem;
   margin: 10px;
+}
+
+.gallery-item .gallery-item-info a {
+  display: inline;
 }
 
 .gallery-item-icons {
@@ -810,6 +814,10 @@ footer p {
     width: 85%;
   }
 
+  .section-portfolio-gallery {
+    margin-top: 180px;
+  }
+
   .skills-list {
     margin-top: 40px;
   }
@@ -834,17 +842,21 @@ footer p {
 
   .gallery-item:nth-of-type(odd) .image-container,
   .gallery-item:nth-of-type(even) .image-container {
-    top: -35%;
+    top: -40%;
   }
 
   .gallery-item .gallery-item-info {
-    height: 85%;
+    height: 90%;
     padding: 10px;
   }
 
   .gallery-item .gallery-item-info p {
     line-height: 2rem;
     margin: 10px 0;
+  }
+
+  .gallery-item-icons {
+    margin-bottom: 5px
   }
 
   .gallery-item-icons .skills-icon {
